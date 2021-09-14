@@ -21,3 +21,7 @@ A problem here is that you cant directly access the texture using the vertex UV 
 Makes the entire skybox cover the entire sky, to allow rendering of custom skyboxes.  
 This is problematic due to the same shader also affecting text highlighting.  
 Uses [Onnowhere's isGUI function](https://github.com/onnowhere/core_shaders).
+
+## Simplified Glowing
+
+This is a super simple *post* shader file that makes glowing perform a lot better by removing the blur thing. This can severely increase fps for some computers. (Vanilla glowing is really bad for weaker computers)
