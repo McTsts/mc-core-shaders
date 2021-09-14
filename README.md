@@ -20,4 +20,4 @@ A problem here is that you cant directly access the texture using the vertex UV 
 
 Makes the entire skybox cover the entire sky, to allow rendering of custom skyboxes.  
 This is problematic due to the same shader also affecting text highlighting.  
-Uses [Onnowhere's inGUI function](https://github.com/onnowhere/core_shaders).
+Uses [Onnowhere's isGUI function](https://github.com/onnowhere/core_shaders).
