@@ -25,3 +25,7 @@ Uses [Onnowhere's isGUI function](https://github.com/onnowhere/core_shaders).
 ## Simplified Glowing
 
 This is a super simple *post* shader file that makes glowing perform a lot better by removing the blur thing. This can severely increase fps for some computers. (Vanilla glowing is really bad for weaker computers)
+
+## Remove Capes
+
+With the migration thing capes have become a bigger problem than ever before, so here's a shader to remove them. Unfortunately, I couldn't find a good way to remove them so I check the texture. Technically it's probably possible to make a skin that fools this (since players are rendered by the same shader), but it would never happen by coincidence.
