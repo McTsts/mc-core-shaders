@@ -14,7 +14,7 @@ bool isGUI(mat4 ProjMat) {
 
 void main() { 
 	vec4 pos = vec4(Position, 1.0);
-	if(!bool(isGUI(ProjMat))) { // make sky cover entire sky
+	if(!isGUI(ProjMat)) { // make sky cover entire sky
 		pos = ProjMat * vec4(Position, 1.0);
 		pos.y = -pos.z;
 	} else { // vanilla behaivor (for text highlight)
