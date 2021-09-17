@@ -29,3 +29,4 @@ This is a super simple *post* shader file that makes glowing perform a lot bette
 ## Remove Capes
 
 With the migration thing capes have become a bigger problem than ever before, so here's a shader to remove them. Unfortunately, I couldn't find a good way to remove them so I check the texture. Technically it's probably possible to make a skin that fools this (since players are rendered by the same shader), but it would never happen by coincidence.
+The armor shader additionally removes cape elytras.
