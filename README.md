@@ -30,3 +30,7 @@ This is a super simple *post* shader file that makes glowing perform a lot bette
 
 With the migration thing capes have become a bigger problem than ever before, so here's a shader to remove them. Unfortunately, I couldn't find a good way to remove them so I check the texture. Technically it's probably possible to make a skin that fools this (since players are rendered by the same shader), but it would never happen by coincidence.
 The armor shader additionally removes cape elytras.
+
+## Hide Armor Glint
+
+Removes the enchanted effect from armor on entities only. Keeps the enchanted effect for things in inventory.
