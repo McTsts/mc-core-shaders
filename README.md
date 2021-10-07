@@ -43,7 +43,7 @@ It's a core shader that moves/resizes the elements of a leather chestplate/upper
 
 ## Skin Effects
 
-This allows players to customize their damage flash color and add blinking to their skin. This is done by setting one pixel to a specific value, specifying a blink frame, a pixel which determines the damage flash color (may not be transparent) and a pixel that determines how often the player blinks.
+This allows players to customize their damage flash color and add blinking to their skin. This is done by setting one pixel to a specific value to enable the effects (#757591 with opacity 187), specifying a blink frame, a pixel which determines the damage flash color (may not be transparent) and a pixel that determines how often the player blinks.
 
 ![image](https://user-images.githubusercontent.com/24660095/136426936-cee123e5-1841-4006-b2c1-085d340f2641.png)
 
