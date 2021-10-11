@@ -5,6 +5,7 @@ No guarantees that any of this is the best solution for anything.
 
 # Modules
 A list of all utilities/shaders/things included in this repo.
+Some of the modules contain some of [Onnowhere's utility functions](https://github.com/onnowhere/core_shaders).
 
 ## Hide Sidebar Numbers
 
@@ -19,8 +20,7 @@ A problem here is that you cant directly access the texture using the vertex UV 
 ## Skybox Entire Sky
 
 Makes the entire skybox cover the entire sky, to allow rendering of custom skyboxes.  
-This is problematic due to the same shader also affecting text highlighting.  
-Uses [Onnowhere's isGUI function](https://github.com/onnowhere/core_shaders).
+This is problematic due to the same shader also affecting text highlighting. 
 
 ## Simplified Glowing
 
