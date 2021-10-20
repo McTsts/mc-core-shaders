@@ -38,11 +38,5 @@ void main() {
 	
 	// remove capes
 	vec2 texSize = textureSize(Sampler0,0);
-	if(	texSize.x == 64 && texSize.y == 32 && // check if size matches a cape
-			texture(Sampler0, vec2(0.0, 1.0/32.0)).a == 1.0 && texture(Sampler0, vec2(12.0/64.0, 16.0/32.0)).a == 1.0 && // check if skin transparent pixels have color
-			(	// support both types of cape texture
-				(texture(Sampler0, vec2(0.0, 18.0/32.0)) == vec4(1.0) && texture(Sampler0, vec2(0.99, 0.99)) == vec4(1.0) && texture(Sampler0, vec2(0.99, 0.0)) == vec4(1.0)) // for capes filled with white, check for white pixels
-				|| (texture(Sampler0, vec2(25.0/64.0, 25.0/32.0)).a == 0.0 || texture(Sampler0, vec2(30.0/64.0, 10.0/32.0)).a == 0.0 || texture(Sampler0, vec2(9.0/64.0, 25.0/32.0)).a == 0.0)  // otherwise check of transparent pixels
-			)
-	) gl_Position = vec4(0.0);
+	if(texSize == ivec2(64, 32)) gl_Position = vec4(0.0);
 }
