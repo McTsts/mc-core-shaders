@@ -31,14 +31,8 @@ flat out int skinEffects;
 flat out vec4 data1Color;
 flat out vec4 data2Color;
 flat out int isFace;
-flat out float fov;
 
 #define EQ(a,b) (length(a - b) < 0.002)
-
-// get fov, made by Onnowhere
-float getFOV(mat4 ProjMat) {
-    return atan(1.0, ProjMat[1][1]) * 114.591559;
-}
 
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
