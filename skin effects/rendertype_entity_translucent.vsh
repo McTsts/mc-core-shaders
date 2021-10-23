@@ -53,5 +53,4 @@ void main() {
 	// detect if rendering face texture (=> blinking)
 	isFace = 0;
 	if(gl_VertexID >= 16 && gl_VertexID < 20) isFace = 1; // check if the vertex ids match the face
-	fov = getFOV(ProjMat); // get the fov
 }
