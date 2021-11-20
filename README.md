@@ -6,7 +6,6 @@ If you want to use any of the things listed on here, but are not sure how to use
 
 # Modules
 A list of all utilities/shaders/things included in this repo.
-Some of the modules contain some of [Onnowhere's utility functions](https://github.com/onnowhere/core_shaders).
 
 ## Hide Sidebar Numbers
 
