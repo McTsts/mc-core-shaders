@@ -51,3 +51,7 @@ This allows players to customize their damage flash color and add blinking to th
 ## Custom Particles
 
 This allows you to use custom particles by using the item/block particles. Item/blocks with an opacity of 254/255 will not have the random offset those particles usually have. Fill empty space with solid red (with opacity 254), this will be turned into transparency.
+
+## Wavy Water
+
+This makes water move up and down.  This is adjusted for only two biomes: the void & swamp. Other biomes may not work. Adjust line 35 of the vsh  (the color checks) to make it work elsewhere.
