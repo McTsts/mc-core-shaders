@@ -47,3 +47,7 @@ This allows players to customize their damage flash color and add blinking to th
 
 ![image](https://user-images.githubusercontent.com/24660095/136426936-cee123e5-1841-4006-b2c1-085d340f2641.png)
 
+
+## Custom Particles
+
+This allows you to use custom particles by using the item/block particles. Item/blocks with an opacity of 254/255 will not have the random offset those particles usually have. Fill empty space with solid red (with opacity 254), this will be turned into transparency.
