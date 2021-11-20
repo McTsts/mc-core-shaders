@@ -32,9 +32,9 @@ void main() {
 	vec4 cornerColor = texture(Sampler0, (texCoordNoOffset+0.5) / texSize); // get color
 	if(cornerColor.a == 254.0/255.0) { 	// check opacity
 		switch(gl_VertexID % 4) {
-			case 0: texCoordNoOffset.y = texCoordNoOffset.y + gridSize; break; // offset to bottom left corner
-			case 1: texCoordNoOffset = texCoordNoOffset + gridSize; break; // offset to bottom right corner
-			case 2: texCoordNoOffset.x = texCoordNoOffset.x + gridSize; break; // offset to top right corner
+			case 0: texCoordNoOffset = texCoordNoOffset + gridSize; break; // offset to bottom right corner
+			case 1: texCoordNoOffset.x = texCoordNoOffset.x + gridSize; break; // offset to top right corner
+			case 3: texCoordNoOffset.y = texCoordNoOffset.y + gridSize; break; // offset to bottom left corner
 		}
 		texCoord0 = texCoordNoOffset / texSize; // convert from coordinates back to [0..1]
 	}
