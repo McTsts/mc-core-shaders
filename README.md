@@ -2,6 +2,7 @@
 
 This is a collection of some shader utilities/projects, mostly for personal use, though feel free to use them for your own purposes if you want to. 
 No guarantees that any of this is the best solution for anything.
+If you want to use any of the things listed on here, but are not sure how to use them / edit them for what you need, let me know on discord (Ts#0001) or create an issue on this repo.
 
 # Modules
 A list of all utilities/shaders/things included in this repo.
@@ -55,3 +56,7 @@ This allows you to use custom particles by using the item/block particles. Item/
 ## Wavy Water
 
 This makes water move up and down.  This is adjusted for only two biomes: the void & swamp. Other biomes may not work. Adjust line 35 of the vsh  (the color checks) to make it work elsewhere.
+
+## Remove Name Boxes
+
+This is a very very simple shader, that removes the boxes around names without having to rely on things like negative spaces.
