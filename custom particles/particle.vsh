@@ -26,7 +26,8 @@ void main() {
 	int gridSize = 16; // size of particle textures
 	vec2 texSize = textureSize(Sampler0,0); // get the size of the texture atlas
 	vec2 texCoordNoOffset = UV0*texSize; // convert from [0..1] to coordinates
-	texCoordNoOffset = texCoordNoOffset - (texCoordNoOffset%gridSize);  // set UV to top left corner
+	texCoordNoOffset.x = texCoordNoOffset.x - mod(texCoordNoOffset.x, gridSize);  // set UV to top left corner
+	texCoordNoOffset.y = texCoordNoOffset.y - mod(texCoordNoOffset.y, gridSize);  // set UV to top left corner
 	// undo random offset
 	vec4 cornerColor = texture(Sampler0, (texCoordNoOffset+0.5) / texSize); // get color
 	if(cornerColor.a == 254.0/255.0) { 	// check opacity
