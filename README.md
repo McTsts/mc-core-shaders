@@ -65,4 +65,4 @@ This is a very very simple shader, that removes the boxes around names without h
 This is a bunch of shaders that can move the player that's displayed inside the inventory. It allows you to define an offset in `includes\util.glsl`, line 26 that offsets the player and everything attached to it. This works with all GUI scales.   
 
 Example:  
-![image](https://user-images.githubusercontent.com/24660095/151046774-9eb092dd-2e09-4c7e-a038-ef4bd7da7d98.png)
+<img src="https://user-images.githubusercontent.com/24660095/151046774-9eb092dd-2e09-4c7e-a038-ef4bd7da7d98.png" width=300>
