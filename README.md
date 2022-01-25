@@ -59,3 +59,10 @@ This makes water move up and down.  This is adjusted for only two biomes: the vo
 ## Remove Name Boxes
 
 This is a very very simple shader, that removes the boxes around names without having to rely on things like negative spaces.
+
+## Move Inventory Player
+
+This is a bunch of shaders that can move the player that's displayed inside the inventory. It allows you to define an offset in `includes\util.glsl`, line 26 that offsets the player and everything attached to it. This works with all GUI scales.   
+
+Example:  
+![image](https://user-images.githubusercontent.com/24660095/151046774-9eb092dd-2e09-4c7e-a038-ef4bd7da7d98.png)
