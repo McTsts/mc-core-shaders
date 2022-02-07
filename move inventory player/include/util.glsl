@@ -43,6 +43,5 @@ bool isInvTopAlt(mat4 ProjMat) {
 }
 
 bool isInvTopSkull(mat4 ModelViewMat, mat4 ProjMat) {
-	float fov = getFOV(ProjMat);
 	return isInvFOV(ProjMat) && isGUI(ProjMat) && ModelViewMat[1][1] > 0.0;
 }
