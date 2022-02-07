@@ -39,7 +39,6 @@ bool isInvTop(mat4 ModelViewMat, mat4 ProjMat) {
 }
 
 bool isInvTopAlt(mat4 ProjMat) {
-	float fov = getFOV(ProjMat);
 	return isInvFOV(ProjMat) && isGUI(ProjMat);
 }
 
