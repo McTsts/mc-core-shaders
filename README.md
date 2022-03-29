@@ -5,7 +5,7 @@ No guarantees that any of this is the best solution for anything.
 If you want to use any of the things listed on here, but are not sure how to use them / edit them for what you need, let me know on discord (Ts#0001) or create an issue on this repo.
 
 # Modules
-A list of all utilities/shaders/things included in this repo.
+A list of all utilities/shaders/things included in this repo. I started listing versions on newer ones, but they may still work in newer or older version, it's simply the most recent release I've tested it in.
 
 ### Useful Shaders
 *You can probably use these for your own maps*  
@@ -21,6 +21,7 @@ A list of all utilities/shaders/things included in this repo.
 - [Remove Nameboxes](#remove-name-boxes)
 - [Move Inventory Player](#move-inventory-player)
 - [Move XP Number](#move-xp-number)
+- [GUI Scale](#gui-scale)
 
 ### Reference Shaders
 *These are mainly here as examples and reference, and you probably won't be able to use these yourself*
@@ -118,5 +119,11 @@ This is a shader that moves the xp number with a fairly specific way of isolatin
 Example:  
 <img src="https://user-images.githubusercontent.com/24660095/160714806-0fde1e77-fd18-47c3-ada2-ffd12f7025ed.png" width=300>
 
+[Back](#modules)
+
+## GUI Scale
+[1.18.2]
+
+A utility function that helps with dealing with GUI scales. 
 
 [Back](#modules)
