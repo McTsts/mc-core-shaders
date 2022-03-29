@@ -18,7 +18,7 @@ A list of all utilities/shaders/things included in this repo.
 - [Skin Effects](#skin-effects)
 - [Custom Particles](#custom-particles)
 - [Wavy Water](#wavy-water)
-- [Remove Nameboxes](#remove-nameboxes)
+- [Remove Nameboxes](#remove-name-boxes)
 - [Move Inventory Player](#move-inventory-player)
 - [Move XP Number](#move-xp-number)
 
@@ -110,10 +110,13 @@ Example:
 
 [Back](#modules)
 
-## Move XP Number [1.18.2]
+## Move XP Number  
+[1.18.2]
 
 This is a shader that moves the xp number with a fairly specific way of isolating it. 
 
 Example:  
+<img src="https://user-images.githubusercontent.com/24660095/160714806-0fde1e77-fd18-47c3-ada2-ffd12f7025ed.png" width=300>
+
 
 [Back](#modules)
