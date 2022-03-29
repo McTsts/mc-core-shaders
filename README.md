@@ -20,6 +20,7 @@ A list of all utilities/shaders/things included in this repo.
 - [Wavy Water](#wavy-water)
 - [Remove Nameboxes](#remove-nameboxes)
 - [Move Inventory Player](#move-inventory-player)
+- [Move XP Number](#move-xp-number)
 
 ### Reference Shaders
 *These are mainly here as examples and reference, and you probably won't be able to use these yourself*
@@ -106,5 +107,13 @@ This is a bunch of shaders that can move the player that's displayed inside the 
 
 Example:  
 <img src="https://user-images.githubusercontent.com/24660095/151046774-9eb092dd-2e09-4c7e-a038-ef4bd7da7d98.png" width=300>
+
+[Back](#modules)
+
+## Move XP Number [1.18.2]
+
+This is a shader that moves the xp number with a fairly specific way of isolating it. 
+
+Example:  
 
 [Back](#modules)
