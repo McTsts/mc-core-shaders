@@ -40,7 +40,7 @@ void main() {
 	
 	// replace face texture => blinking
 	vec2 texSize = textureSize(Sampler0,0);
-	if(skinEffects == 1 && isFace == 1 && (0.1 > mod(GameTime * 1200, (data2Color.r * 5.0)) / (data2Color.r * 5.0)) && texCoord0.y < 16.0/texSize.y && data1Color.a == 1.0) {  // check for skin effects enabled, is face, gametime for blinkin, and finally if a timer for blinking is set
+	if(skinEffects == 1 && isFace == 1 && (0.1 > mod(GameTime * 1200, (data2Color.r * 5.0)) / (data2Color.r * 5.0)) && texCoord0.y < 16.0/texSize.y && data2Color.a == 1.0) {  // check for skin effects enabled, is face, gametime for blinkin, and finally if a timer for blinking is set
 		color = texture(Sampler0, texCoord0 + vec2(16.0/texSize.x, -8.0/texSize.y)); //offset from where it reads the texture
 	}
 	
