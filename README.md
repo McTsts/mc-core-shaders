@@ -22,6 +22,7 @@ A list of all utilities/shaders/things included in this repo. I started listing 
 - [Move Inventory Player](#move-inventory-player)
 - [Move XP Number](#move-xp-number)
 - [GUI Scale](#gui-scale)
+- [Hardcore Hearts](#hardcore-hearts)
 
 ### Reference Shaders
 *These are mainly here as examples and reference, and you probably won't be able to use these yourself*
@@ -127,3 +128,16 @@ Example:
 A utility function that helps with dealing with GUI scales. 
 
 [Back](#modules)
+
+## Hardcore Hearts 
+[1.18.2]
+
+Replaces hearts with heardcore hearts, without affecting the `icons.png` texture. Also does it in tab.
+
+<img src="https://user-images.githubusercontent.com/24660095/163684262-5bd4eb3c-92e7-4e22-8b26-c3d9fa8c789e.png" width=150>
+<img src="https://user-images.githubusercontent.com/24660095/163684266-7f09432f-d45f-45cf-8407-4c784ee8904d.png" width=150>
+
+[Back](#modules)
+
+
+
