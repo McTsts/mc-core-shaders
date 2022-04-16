@@ -132,7 +132,7 @@ A utility function that helps with dealing with GUI scales.
 ## Hardcore Hearts 
 [1.18.2]
 
-Replaces hearts with heardcore hearts, without affecting the `icons.png` texture. Also does it in tab.
+Replaces hearts with heardcore hearts, without affecting the `icons.png` texture. Also does it in tab. Also works for the heart variants like wither, frozen, absorption, etc.
 
 <img src="https://user-images.githubusercontent.com/24660095/163684262-5bd4eb3c-92e7-4e22-8b26-c3d9fa8c789e.png" width=150><img src="https://user-images.githubusercontent.com/24660095/163684266-7f09432f-d45f-45cf-8407-4c784ee8904d.png" width=150>
 
