@@ -104,6 +104,7 @@ This is a very very simple shader, that removes the boxes around names without h
 [Back](#modules)
 
 ## Move Inventory Player
+[1.18.2]
 
 This is a bunch of shaders that can move the player that's displayed inside the inventory. It allows you to define an offset in `includes\util.glsl`, line 26 that offsets the player and everything attached to it. This works with all GUI scales.   
 
