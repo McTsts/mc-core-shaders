@@ -45,7 +45,19 @@ void main() {
 	if(Position.z == 0.0 // z location is always 0 
 		&& ((length(Color.rgb - vec3(0.501, 1.0, 0.125)) < 0.002 && (isAt(offset, vID, 26) || isAt(offset, vID, 27))) // the bright text starts 27 pixels from the bottom, sometimes at 26
 		|| (length(Color.rgb - vec3(0.0, 0.0, 0.0)) < 0.002 && (isAt(offset, vID, 25) || isAt(offset, vID, 26) || isAt(offset, vID, 27) || isAt(offset, vID, 28))))) { // the darker background consists out of 3 elements (26,27,28), sometimes (25,26,27)
+        
+        /** Reposition (Remove up to Reposition End if unnecessary)**/
 		pos += vec3(0.0,10.0,0.0); // apply an offset
+        /* Reposition End */
+        
+        /** Recolor (Remove up to Recolor End if unnecessary)**/
+        if(length(Color.rgb - vec3(0.0, 0.0, 0.0)) < 0.002) {
+            vertexColor = vec4(0.4431, 0.3294, 0, 1); // shadow (usually black)
+        } else {
+            vertexColor = vec4(0.8784, 0.6627, 0, 1); // text (usually green)
+        }
+        /* Recolor End */
+          
 	}
 	
 	gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
