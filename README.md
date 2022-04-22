@@ -113,10 +113,10 @@ Example:
 
 [Back](#modules)
 
-## Move XP Number  
+## Move & Recolor XP Number  
 [1.18.2]
 
-This is a shader that moves the xp number with a fairly specific way of isolating it. 
+This is a shader that moves and recolors the xp number with a fairly specific way of isolating it. You can remove the move or color part easily if you only want the other one.
 
 Example:  
 <img src="https://user-images.githubusercontent.com/24660095/160714806-0fde1e77-fd18-47c3-ada2-ffd12f7025ed.png" width=300>
