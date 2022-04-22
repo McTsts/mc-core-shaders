@@ -24,6 +24,7 @@ void main() {
         && gl_VertexID < 4 // low vertex id
         && ProjMat[3][2] == -2.0 // is gui
         && mod(coords.x - 16, 9) == 0 && mod(coords.y, 9) == 0 // vertices correctly positioned
+        && ((gl_VertexID == 2 || gl_VertexID == 3) && round(coords.y) == 0 || (gl_VertexID == 0 || gl_VertexID == 1) && round(coords.y) == 9) // more precise vertex position check
     ) {
         texCoord0.y = texCoord0.y + (45/texSize.y); // offset 45 pixels down
     }
