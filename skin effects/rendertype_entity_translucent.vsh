@@ -16,6 +16,7 @@ uniform sampler2D Sampler2;
 uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
 
+uniform float GameTime;
 uniform vec3 Light0_Direction;
 uniform vec3 Light1_Direction;
 
@@ -26,31 +27,29 @@ out vec4 overlayColor;
 out vec2 texCoord0;
 out vec4 normal;
 
-// custom values
 flat out int skinEffects;
-flat out vec4 data1Color;
-flat out vec4 data2Color;
 flat out int isFace;
-
-#define EQ(a,b) (length(a - b) < 0.002)
+flat out vec3 Times;
 
 void main() {
+    //skin effects
+    skinEffects = 0;
+    isFace = 0;
+    vec4 skindata = texture(Sampler0, vec2(0.5, 0.0));
+    //face vertices
+    if(((gl_VertexID >= 16 && gl_VertexID < 20) || (gl_VertexID >= 160 && gl_VertexID < 164))) {
+        isFace = 1;
+    }
+    //enable blink
+    if (abs(skindata.a - 0.918) < 0.001) {
+        skinEffects = 1;
+        Times = skindata.rgb;
+    }
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
-
-    vertexDistance = length((ModelViewMat * vec4(Position, 1.0)).xyz);
+    normal = ProjMat * ModelViewMat * vec4(Normal, 0.0);
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
+    vertexDistance = length((ModelViewMat * vec4(Position, 1.0)).xyz);
     lightMapColor = texelFetch(Sampler2, UV2 / 16, 0);
     overlayColor = texelFetch(Sampler1, UV1, 0);
     texCoord0 = UV0;
-    normal = ProjMat * ModelViewMat * vec4(Normal, 0.0);
-	
-	/* custom skin stuff */
-	skinEffects = 0;
-	if(EQ(texture(Sampler0, vec2(63.0/64.0, 0.0)), vec4(117.0/255.0, 117.0/255.0, 145.0/255.0, 187.0/255.0))) skinEffects = 1; // check for a specific pixels which enables the effects
-	// get colors
-    data1Color = texture(Sampler0, vec2(62.0/64.0, 0.0)); // get data pixel #1
-    data2Color = texture(Sampler0, vec2(61.0/64.0, 0.0)); // get data pixel #2
-	// detect if rendering face texture (=> blinking)
-	isFace = 0;
-	if(gl_VertexID >= 16 && gl_VertexID < 20) isFace = 1; // check if the vertex ids match the face
 }
