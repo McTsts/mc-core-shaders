@@ -20,8 +20,6 @@ out float vertexDistance;
 out vec4 vertexColor;
 out vec2 texCoord0;
 
-#define EQ(a,b) (length(a - b) < 0.002)
-
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
 
