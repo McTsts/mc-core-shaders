@@ -1,5 +1,7 @@
 #version 150
 
+#moj_import <fog.glsl>
+
 in vec3 Position;
 in vec4 Color;
 in vec2 UV0;
@@ -9,6 +11,8 @@ uniform sampler2D Sampler2;
 
 uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
+uniform mat3 IViewRotMat;
+uniform int FogShape;
 
 uniform vec2 ScreenSize;
 
@@ -16,13 +20,15 @@ out float vertexDistance;
 out vec4 vertexColor;
 out vec2 texCoord0;
 
+#define EQ(a,b) (length(a - b) < 0.002)
+
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
 
-    vertexDistance = length((ModelViewMat * vec4(Position, 1.0)).xyz);
+    vertexDistance = fog_distance(ModelViewMat, IViewRotMat * Position, FogShape);
     vertexColor = Color * texelFetch(Sampler2, UV2 / 16, 0);
     texCoord0 = UV0;
-	
+    
 	// delete sidebar numbers
 	if(	Position.z == 0.0 && // check if the depth is correct (0 for gui texts)
 			gl_Position.x >= 0.95 && gl_Position.y >= -0.35 && // check if the position matches the sidebar
