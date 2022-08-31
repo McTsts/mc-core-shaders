@@ -29,6 +29,7 @@ A list of all utilities/shaders/things included in this repo. I started listing 
 - [Jetpack](#jetpack)
 
 ## Hide Sidebar Numbers
+[1.19.2]
 
 Hides the first number of scores on the sidebar without removing anything else.  
 Includes code/ideas from Suso and dragonmaster95.
