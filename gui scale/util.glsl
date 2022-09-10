@@ -32,3 +32,10 @@ vec2 guiPixel(mat4 ProjMat) {
 the resulting value is the size of a gui pixel in screen space,
 so you can do something like "gl_Position.x += guiPixel(ProjMat).x" to move a gui element by 1 gui pixel in screen space
 **/
+
+/**
+From the above we can conclude that ProjMat[0][0]/2.0 has the size of a gui pixel on the x axis, comparing that to the screen size returns the gui scale.
+**/
+int guiScale(mat4 ProjMat, vec2 ScreenSize) {
+    return int(round(ScreenSize.x * ProjMat[0][0] / 2));
+}
