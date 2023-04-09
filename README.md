@@ -38,6 +38,7 @@ Includes code/ideas from Suso and dragonmaster95.
 [Back](#modules)
 
 ## Move Hearts
+[1.19.4]
 
 A shader to move the hearts (or other gui elements), made for VALENTINX110.  
 A problem here is that you cant directly access the texture using the vertex UV coordinates as they might be barely in another pixel. This can be resolved by offsetting the position by half a pixel depending on the gl_VertexID.
