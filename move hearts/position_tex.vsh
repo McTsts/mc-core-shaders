@@ -21,6 +21,7 @@ vec4 getVertexColor(sampler2D Sampler, int vertexID, vec2 coords) {
 	float pixelY = (1.0/texSize.y) / 2.0; // includes the height of the texture
 	vertexID = vertexID % 4; // every plane has 4 vertices
 	switch(vertexID) {
+		// when on a version below 1.19.4 use 0123 instead of 1230
 		case 1: offset = vec2(-pixelX, pixelY); break;
 		case 2: offset = vec2(pixelX, pixelY); break;
 		case 3: offset = vec2(pixelX, -pixelY); break;
