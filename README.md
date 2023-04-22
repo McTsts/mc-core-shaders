@@ -1,6 +1,6 @@
 # Minecraft Core Shader Projects & Utilities
 
-This is a collection of some shader utilities/projects, mostly for personal use, though feel free to use them for your own purposes if you want to. 
+This is a collection of some shader utilities/projects, mostly for personal use, though feel free to use them for your own purposes if you want to.
 No guarantees that any of this is the best solution for anything.
 If you want to use any of the things listed on here, but are not sure how to use them / edit them for what you need, let me know on discord (Ts#0001) or create an issue on this repo.
 
@@ -8,7 +8,7 @@ If you want to use any of the things listed on here, but are not sure how to use
 A list of all utilities/shaders/things included in this repo. I started listing versions on newer ones, but they may still work in newer or older version, it's simply the most recent release I've tested it in.
 
 ### Useful Shaders
-*You can probably use these for your own maps*  
+*You can probably use these for your own maps*
 - [Hide Sidebar Numbers](#hide-sidebar-numbers)
 - [Move Hearts](#move-hearts)
 - [Skybox Entire Sky](#skybox-entire-sky)
@@ -32,7 +32,7 @@ A list of all utilities/shaders/things included in this repo. I started listing 
 ## Hide Sidebar Numbers
 [1.19.2]
 
-Hides the first number of scores on the sidebar without removing anything else.  
+Hides the first number of scores on the sidebar without removing anything else.
 Includes code/ideas from Suso and dragonmaster95.
 
 [Back](#modules)
@@ -40,17 +40,17 @@ Includes code/ideas from Suso and dragonmaster95.
 ## Move Hearts
 [1.19.4]
 
-A shader to move the hearts (or other gui elements), made for VALENTINX110.  
+A shader to move the hearts (or other gui elements), made for VALENTINX110.
 A problem here is that you cant directly access the texture using the vertex UV coordinates as they might be barely in another pixel. This can be resolved by offsetting the position by half a pixel depending on the gl_VertexID.
 
 [Back](#modules)
 
 ## Skybox Entire Sky
 
-Makes the entire skybox cover the entire sky, to allow rendering of custom skyboxes.  
+Makes the entire skybox cover the entire sky, to allow rendering of custom skyboxes.
 This is problematic due to the same shader also affecting text highlighting.
 
-[Back](#modules) 
+[Back](#modules)
 
 ## Simplified Glowing
 
@@ -109,9 +109,9 @@ This is a very very simple shader, that removes the boxes around names without h
 ## Move Inventory Player
 [1.18.2]
 
-This is a bunch of shaders that can move the player that's displayed inside the inventory. It allows you to define an offset in `includes\util.glsl`, line 26 that offsets the player and everything attached to it. This works with all GUI scales.   
+This is a bunch of shaders that can move the player that's displayed inside the inventory. It allows you to define an offset in `includes\util.glsl`, line 26 that offsets the player and everything attached to it. This works with all GUI scales.
 
-Example:  
+Example:
 <img src="https://user-images.githubusercontent.com/24660095/151046774-9eb092dd-2e09-4c7e-a038-ef4bd7da7d98.png" width=300>
 
 [Back](#modules)
@@ -121,7 +121,7 @@ Example:
 
 This is a shader that moves and recolors the xp number with a fairly specific way of isolating it. You can remove the move or color part easily if you only want the other one.
 
-Example:  
+Example:
 <img src="https://user-images.githubusercontent.com/24660095/160714806-0fde1e77-fd18-47c3-ada2-ffd12f7025ed.png" width=300>
 
 [Back](#modules)
@@ -129,11 +129,11 @@ Example:
 ## GUI Scale
 [1.18.2]
 
-A utility function that helps with dealing with GUI scales. 
+A utility function that helps with dealing with GUI scales.
 
 [Back](#modules)
 
-## Hardcore Hearts 
+## Hardcore Hearts
 [1.18.2]
 
 Replaces hearts with heardcore hearts, without affecting the `icons.png` texture. Also does it in tab. Also works for the heart variants like wither, frozen, absorption, etc.
