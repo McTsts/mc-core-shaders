@@ -1,8 +1,6 @@
 #version 150
 
 #moj_import <light.glsl>
-#moj_import <fog.glsl>
-#moj_import <util.glsl>
 
 in vec3 Position;
 in vec4 Color;
@@ -16,8 +14,6 @@ uniform sampler2D Sampler2;
 
 uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
-uniform mat3 IViewRotMat;
-uniform int FogShape;
 
 uniform vec3 Light0_Direction;
 uniform vec3 Light1_Direction;
@@ -30,18 +26,20 @@ out vec2 texCoord0;
 out vec4 normal;
 float depth = -(ModelViewMat * vec4(1.0)).z;
 void main() {
-
-	if(isInvTop(ModelViewMat, ProjMat) && depth < 1000) {
-		gl_Position = (ProjMat * ((ModelViewMat * vec4(Position, 1.0))  + INV_OFFSET)); // offset
-	} else {
-		gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
-		
+	vec3 pos = Position;
+    
+	
+	
+	
+	if (depth == 1999) {
+		pos += vec3(0, 0, 0); // apply an offset
 	}
-
-    vertexDistance = fog_distance(ModelViewMat, IViewRotMat * Position, FogShape);
+    vertexDistance = length((ModelViewMat * vec4(Position, 1.0)).xyz);
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
     lightMapColor = texelFetch(Sampler2, UV2 / 16, 0);
     overlayColor = texelFetch(Sampler1, UV1, 0);
     texCoord0 = UV0;
     normal = ProjMat * ModelViewMat * vec4(Normal, 0.0);
+	
+	gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 }

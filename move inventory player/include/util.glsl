@@ -23,7 +23,7 @@ bool isGUI(mat4 ProjMat) {
 /*
 Added by Ts
 */
-#define INV_OFFSET vec4(-80.0, 70.0, 0.0, 0.0)
+#define INV_OFFSET vec4(0.0, 0.0, 0.0, 0.0)
 
 bool isInvViewMat(mat4 ModelViewMat) {
 	return ModelViewMat[0] == vec4(1.0,0.0,0.0,0.0) && ModelViewMat[1] == vec4(0.0,1.0,0.0,0.0) && ModelViewMat[2] == vec4(0.0,0.0,-1.0,0.0);
@@ -35,7 +35,7 @@ bool isInvFOV(mat4 ProjMat) {
 }
 
 bool isInvTop(mat4 ModelViewMat, mat4 ProjMat) {
-	return isInvFOV(ProjMat) && isGUI(ProjMat) && isInvViewMat(ModelViewMat);
+	return isInvFOV(ProjMat) && isGUI(ProjMat);
 }
 
 bool isInvTopAlt(mat4 ProjMat) {
