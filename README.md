@@ -2,7 +2,7 @@
 
 This is a collection of some shader utilities/projects, mostly for personal use, though feel free to use them for your own purposes if you want to. 
 No guarantees that any of this is the best solution for anything.
-If you want to use any of the things listed on here, but are not sure how to use them / edit them for what you need, let me know on discord (Ts#0001) or create an issue on this repo.
+If you want to use any of the things listed on here, but are not sure how to use them / edit them for what you need, let me know on discord (@mctsts), on the [crowdford server](https://discord.gg/qZ3SCcc) or create an issue on this repo.
 
 # Modules
 A list of all utilities/shaders/things included in this repo. I started listing versions on newer ones, but they may still work in newer or older version, it's simply the most recent release I've tested it in.
