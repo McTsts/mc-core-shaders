@@ -1,6 +1,7 @@
 #version 150
 
 #moj_import <light.glsl>
+#moj_import <fog.glsl>
 #moj_import <util.glsl>
 
 in vec3 Position;
@@ -14,6 +15,7 @@ uniform sampler2D Sampler2;
 
 uniform mat4 ModelViewMat;
 uniform mat4 ProjMat;
+uniform int FogShape;
 
 uniform vec3 Light0_Direction;
 uniform vec3 Light1_Direction;
@@ -23,24 +25,19 @@ out vec4 vertexColor;
 out vec2 texCoord0;
 out vec2 texCoord1;
 out vec4 normal;
-flat out vec4 tint;
-flat out vec3 vNormal;
-flat out vec4 texel;
-
+float depth = -(ModelViewMat * vec4(1.0)).z;
 void main() {
-    vNormal = Normal;
-    texel = texelFetch(Sampler2, UV2 / 16, 0);
-	
-	if(isInvTopAlt(ProjMat)) { // detects it's being rendered in their inventory
+
+	if(isInvTopAlt(ProjMat)) {
 		gl_Position = (ProjMat * ((ModelViewMat * vec4(Position, 1.0))  + INV_OFFSET)); // offset
 	} else {
 		gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
 	}
 
-    vertexDistance = length((ModelViewMat * vec4(Position, 1.0)).xyz);
+    vertexDistance = fog_distance(ModelViewMat, Position, FogShape);
     vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color) * texelFetch(Sampler2, UV2 / 16, 0);
-    tint = Color;
     texCoord0 = UV0;
     texCoord1 = UV1;
     normal = ProjMat * ModelViewMat * vec4(Normal, 0.0);
 }
+

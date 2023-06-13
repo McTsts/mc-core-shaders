@@ -30,12 +30,10 @@ out vec2 texCoord0;
 out vec4 normal;
 float depth = -(ModelViewMat * vec4(1.0)).z;
 void main() {
-
-	if(isInvTop(ModelViewMat, ProjMat) && depth < 1000) {
+    if(isInvTop(ModelViewMat, ProjMat) && depth < 1000) { // detects it's being rendered in their inventory
 		gl_Position = (ProjMat * ((ModelViewMat * vec4(Position, 1.0))  + INV_OFFSET)); // offset
 	} else {
 		gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
-		
 	}
 
     vertexDistance = fog_distance(ModelViewMat, IViewRotMat * Position, FogShape);
