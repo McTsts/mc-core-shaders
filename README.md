@@ -146,7 +146,7 @@ A utility function that helps with dealing with GUI scales.
 [Back](#modules)
 
 ## Hardcore Hearts 
-[1.18.2]
+[1.18.2 - 1.20]
 
 Replaces hearts with heardcore hearts, without affecting the `icons.png` texture. Also does it in tab. Also works for the heart variants like wither, frozen, absorption, etc.
 
